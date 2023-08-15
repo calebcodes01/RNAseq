@@ -4,5 +4,5 @@ install.packages("devtools")
 #Download package from git repository
 devtools::install_github("loukesio/ggvolc")
 
-#Initialize/load the package
+#Load the package
 library(ggvolc)
