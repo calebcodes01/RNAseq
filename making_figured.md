@@ -17,7 +17,7 @@ You can make the same plot with 10 "attention genes" (a df of exactly 10 genes t
 
 	ggvolc(df, attention_genes, size_var = "pvalue", add_seg = TRUE)
 
- #More customization! Color and specific thresholds
+ More customization! Color and specific thresholds
  
 	gggvolc(
     df, 
