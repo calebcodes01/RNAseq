@@ -1,9 +1,6 @@
 #The program takes in DESEQ2 output. To upload an excel file as a usable dataframe install the following package
-```
-
 install.packages("readxl")
 
-```
 #load the package
 library ("readxl")
 
