@@ -1,5 +1,4 @@
 # RNAseq data visualization of DEG's
-
 This repository is a walkthrough on how to:
 
 # Perform RNA-seq analyses: 
