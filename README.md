@@ -2,21 +2,21 @@
 This repository is a walkthrough on how to:
 
 # Perform RNA-seq analyses: 
-  Trimming raw fastq reads
+~  Trimming raw fastq reads
 <br>
-  Map reads to a reference genome 
+~  Map reads to a reference genome 
 <br>
-  Quantify transcripts with Salmon
+~  Quantify transcripts with Salmon
 <br>
-  Perform DESeq2 analysis with Salmon output
+~  Perform DESeq2 analysis with Salmon output
 
 
 # Visualize the data:
-  Install ggvolc and its dependencies
+~  Install ggvolc and its dependencies
 <br>
-  Uploading DESeq2 data
+~  Uploading DESeq2 data
 <br>
-  Generating volcano plots
+~  Generating volcano plots
 
 
 # Citation information
