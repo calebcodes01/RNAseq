@@ -3,7 +3,6 @@
 This repository is a walkthrough on how to:
 
 # Perform RNA-seq analyses: 
-<br>
   Trimming raw fastq reads
 <br>
   Map reads to a reference genome 
@@ -14,7 +13,6 @@ This repository is a walkthrough on how to:
 
 
 # Visualize the data:
-<br>
   Install ggvolc and its dependencies
 <br>
   Uploading DESeq2 data
