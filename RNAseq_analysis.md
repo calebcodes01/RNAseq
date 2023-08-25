@@ -16,3 +16,7 @@ names(files) <- c("221", "222", "151", "544", "1008", "1009", "1010", "1011", "1
 files = file.path(c("221_quant.sf", "222_quant.sf", "151_quant.sf", "544_quant.sf", "1008_quant.sf", "1009_quant.sf", "1010_quant.sf", "1011_quant.sf", "1061_quant.sf", "1063_quant.sf", "1081_quant.sf", "1089_quant.sf"))
 txi = tximport(files, 'salmon', txOut=TRUE)
 ColData <- read.table("ColData.txt", header=TRUE, sep = ',')
+dds = DESeqDataSetFromTximport(txi, ColData, ~Condition)
+dds <- dds[rowSums(counts(dds)) >100, ]
+res2 <- results(dds)
+write.table(res2, file="liz_rnaseq_results.txt", sep='\t')
