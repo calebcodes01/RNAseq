@@ -10,13 +10,15 @@ grep -P "\tCDS\t" pa14.gff | cut -f 9 | cut -d "=" -f 3 | sed "s/gene-PA_//" | s
 paste sa_tags.txt pa-bwa.counts.txt | cut -f 1,5-8 > pa-bwa.countsR.txt 
 
 
-
-
-names(files) <- c("221", "222", "151", "544", "1008", "1009", "1010", "1011", "1061", "1063", "1081", "1089")
-files = file.path(c("221_quant.sf", "222_quant.sf", "151_quant.sf", "544_quant.sf", "1008_quant.sf", "1009_quant.sf", "1010_quant.sf", "1011_quant.sf", "1061_quant.sf", "1063_quant.sf", "1081_quant.sf", "1089_quant.sf"))
+library(DESeq2)
+BiocManager::install("tximport")
+library(tximport)
+files = file.path(c("544_quant.sf", "221_quant.sf", "222_quant.sf"))
+names(files) <- c("544", "221", "222")
 txi = tximport(files, 'salmon', txOut=TRUE)
-ColData <- read.table("ColData.txt", header=TRUE, sep = ',')
+ColData <- read.table("ColData.txt", header=TRUE, sep = '\t')
 dds = DESeqDataSetFromTximport(txi, ColData, ~Condition)
 dds <- dds[rowSums(counts(dds)) >100, ]
-res2 <- results(dds)
-write.table(res2, file="liz_rnaseq_results.txt", sep='\t')
+dds <- DESeq(dds)
+res <- results(dds, contrast=c("Condition", "ko", "control"))
+write.table(res, file="544_DESeq2_results.txt", sep='\t')
