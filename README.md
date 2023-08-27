@@ -2,22 +2,23 @@
 This repository is a walkthrough on how to:
 
 # Perform RNA-seq analyses: 
-RNAseq_analysis.md
-
+`RNAseq_analysis.md`
+~Merge Illumina lane reads `illumina_fastq_lane_merging.sh`
+<br>
 ~  Trimming raw fastq reads
 <br>
 ~  Map reads to a reference genome 
 <br>
-~  Quantify transcripts with Salmon
+~  Quantify transcripts with multiBamCov
 <br>
 ~  Perform DESeq2 analysis with Salmon output
 
 # Visualize the data:
-~  Install ggvolc and its dependencies (ggvolc_installation.md)
+~  Install ggvolc and its dependencies `ggvolc_installation.md`
 <br>
-~  Uploading DESeq2 data (data_upload.md)
+~  Uploading DESeq2 data `data_upload.md`
 <br>
-~  Generating volcano plots (making_figures.md)
+~  Generating volcano plots `making_figures.md`
 
 # Citation information
 List of packages, versions used, citations, and relevant links
